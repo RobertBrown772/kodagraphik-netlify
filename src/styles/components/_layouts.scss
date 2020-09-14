@@ -1,0 +1,46 @@
+.page-section{
+  min-height: 85vh;
+  padding-top: 80px;
+}
+
+html, body{
+  background-color:gainsboro;
+}
+
+.about-page{
+  margin-bottom: 80px;
+  margin-top: 50px;  
+  
+  .content-row{
+    margin-bottom: 150px;
+    background: white;
+    padding: 100px 20px 20px 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+  }
+
+  .bio-row{
+    margin-bottom: -80px;
+  }
+ 
+
+  .bio-image{ 
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+    border-radius: 50vw;
+  }
+}
+
+.contact-page, .home-page{
+  margin-bottom: 80px;
+  margin-top: 80px;  
+  background-color: white;
+  padding: 50px 20px 50px 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+
+}
+
+.projects-page{
+  margin-top: 50px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+  background-color: white;
+  padding: 20px 
+}

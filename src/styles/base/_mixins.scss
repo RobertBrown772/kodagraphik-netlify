@@ -1,0 +1,148 @@
+/*==============================================================================
+// File:        _mixins.scss
+// Package:     KG2020
+// Synopsis:    Koda Template Mixins
+//============================================================================*/
+
+/*------------------------------------------------------------------------------
+// VISUALS
+//----------------------------------------------------------------------------*/
+
+// DROP SHADOW
+@mixin insert-shadow($hOff, $vOff, $sBlur, $sSpread, $Colour) {
+  -webkit-box-shadow: $hOff $vOff $sBlur $sSpread $Colour;
+  -moz-box-shadow: $hOff $vOff $sBlur $sSpread $Colour;
+  box-shadow: $hOff $vOff $sBlur $sSpread $Colour
+}
+
+// LINEAR GRADIENT
+@mixin linear-gradient($start, $end) {
+  background: $start;
+  background: -moz-linear-gradient(top,  $start 0%, $end 100%);
+  background: -webkit-linear-gradient(top,  $start 0%,$end 100%);
+  background: linear-gradient(to bottom,  $start 0%,$end 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end', GradientType = 0);
+}
+
+
+/*------------------------------------------------------------------------------
+// ANIMATIONS
+//----------------------------------------------------------------------------*/
+
+// TRANSITIONS
+@mixin transition($property, $duration, $type, $delay) {
+  -webkit-transition: $property $duration $type $delay;
+  -moz-transition: $property $duration $type $delay;
+  -ms-transition: $property $duration $type $delay;
+  -o-transition: $property $duration $type $delay;
+  transition: $property $duration $type $delay
+}
+
+/*------------------------------------------------------------------------------
+// HELPERS
+//----------------------------------------------------------------------------*/
+
+// MARGIN AUTO
+@mixin push-auto {
+  margin: {
+    right: auto;
+    left: auto
+  }
+}
+
+// Flex Center
+@mixin flex-center {
+  -webkit-align-items: center;
+  justify-content: center;
+  display: -webkit-flex;
+  align-items: center;
+  display: flex
+}
+
+// Flex End.
+@mixin flex-end {
+  -webkit-align-items: flex-end;
+  justify-content: flex-end;
+  display: -webkit-flex;
+  align-items: flex-end;
+  display: flex
+}
+/*------------------------------------------------------------------------------
+// BLOCK __ELEMENT --MODIFIER
+//----------------------------------------------------------------------------*/
+
+@mixin adjoin($adjoin) {
+  &.#{$adjoin} {
+    @content;
+  }
+}
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+/*------------------------------------------------------------------------------
+// INPUT PLACEHOLDER MIXIN
+//----------------------------------------------------------------------------*/
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+    // respond is the name of your mixin
+
+    @mixin media($breakpoint) {
+
+        // $breakpoint is simply a variable that can have several values
+
+        @if $breakpoint==tablet {
+
+            // here `laptop` is the value of $breakpoint
+            // when call laptop, we mean the following piece of code
+
+        @media only screen and (max-width: 991px) {
+          @content;
+        }
+      }
+
+      @if $breakpoint==mobile {
+        @media only screen and (max-width: 480px) {
+          @content;
+        }
+      }
+    }

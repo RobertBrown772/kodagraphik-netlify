@@ -1,0 +1,140 @@
+/*==============================================================================
+// Project:     _Utility.scss
+// Package:     2020 Framework
+//============================================================================*/
+
+// TEXT UTILITY CLASSES
+// -------------------------- ALIGNMENT -------------------------
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.text-justify{
+  text-align: justify;
+}
+.poppins{
+  font-family: Poppins;
+}
+
+.text-bold{
+  font-weight: 700;
+}
+// ---------------------- VISUALS
+.display{
+  font-weight: $font-light;
+  text-transform: uppercase;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+
+.text-sm{
+  font-size: $font-sm;
+}
+
+.text-df{
+  font-size: $font-df;
+}
+.text-df-plus{
+  font-size: 18px;
+}
+
+.text-md{
+  font-size: $font-md;
+}
+.text-st{
+  font-size: 22px;
+}
+
+
+.text-primary{
+  color: $primary;
+}
+.text-secondary{
+  color: $secondary;
+}
+.text-tertiary{
+  color: $tertiary;
+}
+.text-white{
+  color: white;
+}
+.text-dark{
+  color: $dark;
+}
+.bg-light{
+  background-color: rgba(#efefef, 0.6);
+  backdrop-filter: blur(20px);
+}
+.bg-white{
+  background-color: rgba(#fff, 0.6);
+  backdrop-filter: blur(20px);
+}
+.bg-dark{
+  background-color:: $dark;
+}
+
+.bg-primary{
+  background-color:: $primary;
+}
+.bg-secondary{
+  background-color: $secondary;
+}
+.bg-tertiary{
+  background-color: $tertiary;
+}
+
+.shadow{
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
+}
+
+.display{
+  font-weight: 100;
+}
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}
+//  ---------- FLEX UTILITIES
+
+.flexrow{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flexcol{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.flexend{
+  align-items: flex-end;
+}
+.flexstart{
+  align-items: flex-start;
+}
+.center{
+  margin: 0 auto;
+}
+.no-pad{
+  padding-left: 0px !important;
+  padding-right: 0px!important;
+}
+.full-width{
+  width: 100%;
+}
+.mb-sm-3{
+  @include media(tablet){
+  margin-bottom: 30px!important;
+}
+}

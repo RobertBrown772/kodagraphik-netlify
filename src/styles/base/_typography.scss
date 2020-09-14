@@ -1,0 +1,68 @@
+/*==============================================================================
+// Project:     _Typography.scss
+// Package:     2020 Framework
+//============================================================================*/
+
+// HEADER TEXT BASIC STYLING
+h1, h2, h3, h4, h5, a, p, ul, li{
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, h5{
+  font-family: $header-font;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+p{
+  line-height: $line-height-df;
+}
+
+strong, b{
+  font-weight: bold;
+}
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 36px;
+
+h1 {
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+h2 {
+  font-size: $mod_1*$mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+h3 {
+  font-size: $mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+}
+h4{
+  font-size: $mod_1 *0.4rem;
+  @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2 *$min_font);
+}
+h5{
+font-size: 22px;
+}
+
+// PARAGRAPH AND LINK TEXT BASICS
+
+p{
+  font-size: $font-df;
+  font-family: $main-font;
+}
+
+a{
+  font-family: $main-font;
+
+  &:hover{
+      color: $primaryHover;
+  }
+}
+.display{
+  font-weight: 400!important;
+}

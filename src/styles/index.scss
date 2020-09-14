@@ -1,0 +1,24 @@
+/*==============================================================================
+// Project:     Koda2020.scss
+// Package:     2020 Framework
+//============================================================================*/
+
+// CORE COMPONENT S
+@import "./base/variables";
+@import "./core/bootstrap-grid";
+@import "core/normalise";
+@import "core/hover";
+@import "core/aos";
+
+//BASE COMPONENTS
+@import "base/mixins";
+@import "base/fontloader";
+@import "base/typography";
+@import "base/utility";
+
+// COMPONENTS
+@import "components/layouts";
+@import "components/navigation";
+@import "components/footer";
+@import "components/article";
+@import "components/button";

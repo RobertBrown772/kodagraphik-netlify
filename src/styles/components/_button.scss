@@ -1,0 +1,91 @@
+/*==============================================================================
+// File:        _button.scss
+// Package:     KG2020
+// Synopsis:    Koda Template Button
+//============================================================================*/
+
+.koda-btn{
+  font-family: Lato;
+  font-family: $header-font;
+  padding: 8px 8px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  transition: $transition;
+
+  @include element ("wide"){
+  padding: 8px 30px;
+  }
+}
+
+.koda-btn__primary{
+    background-color: $primary;
+    color: white;
+
+    &:hover{
+      background-color: $primaryHover;
+      color: white;
+    }
+}
+.koda-btn__secondary{
+    background-color: $secondary;
+    color: white;
+
+    &:hover,
+    .koda-card:hover{
+      background-color: $secondaryHover;
+      color: white;
+    }
+}
+.koda-btn__tertiary{
+  background-color: $tertiary;
+  color: white;
+
+  &:hover{
+    background-color: $tertiaryHover;
+    color: white;
+  }
+}
+
+
+
+.koda-btn-outline__primary{
+  border: 2px solid $primary;
+  color: $primary;
+
+  &:hover{
+    background-color: $primary;
+    color: white;
+  }
+}
+.koda-btn-outline__secondary{
+  border: 2px solid $secondary;
+  color: $secondary;
+
+  &:hover{
+    background-color: $secondary;
+    color: white;
+  }
+}
+
+.koda-card:hover{
+  .koda-btn__primary{
+    background-color: $primaryHover;
+    color: white;
+  }
+  .koda-btn__secondary{
+    background-color: $secondaryHover;
+    color: white;
+  }
+  .koda-btn-outline__primary{
+    background-color: $primary;
+    color: white;
+  }
+  .koda-btn-outline__secondary{
+    background-color: $secondary;
+    color: white;
+  }
+}
