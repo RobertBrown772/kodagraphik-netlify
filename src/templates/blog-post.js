@@ -24,10 +24,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1>
             {post.frontmatter.title}
           </h1>
-          <p className="d-none d-md-block">
+          <p className=" date d-none d-md-block">
             {post.frontmatter.date}
           </p>
         </header>
+        <hr/>
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"/>
         <hr/>
           <Bio />

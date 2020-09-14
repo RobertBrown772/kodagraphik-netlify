@@ -3,10 +3,17 @@
     margin: 0px;
     padding: 20px;
     background: white;
-    margin-top: 10px;
+    margin-top: 30px;
     
     .date{
         font-family: $header-font;
+    }
+
+    section{
+        min-height: 110px;
+        p{
+            font-size: 12px;
+        }
     }
   } 
 
@@ -36,9 +43,10 @@
         h1{
             font-size: 42px;
         }
-        p{
+        .date{
             font-family: $header-font;
             font-size: 22px;
+            margin-top: 0px!important;
         }
     } 
 
@@ -76,6 +84,10 @@
 
     hr{
         margin: 20px 0px 20px 0px;
+    }
+    p:not(:first-child){
+        margin-top: 20px;
+        
     }
 
 }

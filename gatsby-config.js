@@ -85,7 +85,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+      }, 
     },
     `gatsby-plugin-feed`,
     {
@@ -110,6 +110,6 @@ module.exports = {
     'gatsby-plugin-netlify-cms'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`, 
   ],
 }
